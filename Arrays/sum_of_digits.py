@@ -12,37 +12,23 @@
 #  	- then reduce the last digit from the number => num // 10
 #  	- print the total
 
-# -> recursion
-# 	- check if the num is 0 if 0 return 0
-# 	- wee need the last digit and add the last digit by calling the function recursively and reducing the last number from it.
 
 num = 345234
 
 total = 0
 
-# for i in str(num):
+for i in str(num):
 
-#     total += int(i)
+    total += int(i)
 
-# print(total)
-
-
-# while num > 0:
-
-#     last = num % 10
-
-#     total += last
-#     num //= 10
-
-# print(total)
+print(total)
 
 
-def main(num):
+while num > 0:
 
-    if num == 0:
-        return 0
+    last = num % 10
 
-    return (num % 10) + main(num // 10)
+    total += last
+    num //= 10
 
-
-print(main(12345))
+print(total)
